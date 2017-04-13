@@ -4,17 +4,18 @@ import { StyleSheet, Text, View } from 'react-native';
 import firebase from 'firebase';
 import SignupForm from './components/SignupForm';
 import SigninForm from './components/SigninForm';
+import secrets from './secrets';
 
 class App extends React.Component {
   
   componentDidMount() {
      const config = {
-      apiKey: "AIzaSyBz9rhSOa5R1c_udMMxvF-9-DpsjFZ9Q9Q",
-      authDomain: "one-time-password-ce89b.firebaseapp.com",
-      databaseURL: "https://one-time-password-ce89b.firebaseio.com",
-      projectId: "one-time-password-ce89b",
-      storageBucket: "one-time-password-ce89b.appspot.com",
-      messagingSenderId: "148738243163"
+      apiKey: secrets.apiKey,
+      authDomain: secrets.authDomain,
+      databaseURL: secrets.databaseURL,
+      projectId: secrets.projectId,
+      storageBucket: secrets.storageBucket,
+      messagingSenderId: secrets.messagingSenderId
     };
     firebase.initializeApp(config);
   }
